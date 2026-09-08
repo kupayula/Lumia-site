@@ -347,12 +347,12 @@
       display:block; position:absolute; top:0; right:0; bottom:0; left:auto;
       width:58%; height:100%; max-width:none; margin:0; border-radius:0; aspect-ratio:auto; z-index:1; overflow:hidden;
     }
-    .hero-photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:66% 30%; display:block; }
+    .hero-photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:66% 30%; display:block; filter:brightness(0.86) contrast(1.05); }
     .hero-photo-frame::before{
       content:''; position:absolute; inset:0; pointer-events:none; z-index:1;
       background:
-        linear-gradient(90deg, var(--bg) 0%, rgba(10,12,15,0) 45%),
-        linear-gradient(180deg, var(--bg) 0%, rgba(10,12,15,0) 14%, rgba(10,12,15,0) 86%, var(--bg) 100%);
+        linear-gradient(90deg, var(--bg) 0%, rgba(10,12,15,0) 48%),
+        linear-gradient(180deg, var(--bg) 0%, rgba(10,12,15,0) 30%, rgba(10,12,15,0) 76%, var(--bg) 100%);
     }
 
     .program-bg-mobile{ display:none; }
