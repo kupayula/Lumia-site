@@ -350,9 +350,8 @@
     .hero-photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:66% 30%; display:block; filter:brightness(0.86) contrast(1.05); }
     .hero-photo-frame::before{
       content:''; position:absolute; inset:0; pointer-events:none; z-index:1;
-      background:
-        linear-gradient(90deg, var(--bg) 0%, rgba(10,12,15,0) 48%),
-        linear-gradient(180deg, var(--bg) 0%, rgba(10,12,15,0) 30%, rgba(10,12,15,0) 76%, var(--bg) 100%);
+      background: linear-gradient(90deg, var(--bg) 0%, rgba(10,12,15,0) 42%);
+      box-shadow: inset 0 0 110px 30px var(--bg);
     }
 
     .program-bg-mobile{ display:none; }
