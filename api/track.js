@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
 
   try {
     const body = req.body || {};
-    const { event_name, event_id, event_source_url, fbp, fbc } = body;
+    const { event_name, event_id, event_source_url, fbp, fbc, test_event_code } = body;
 
     const pixelId = process.env.META_PIXEL_ID;
     const accessToken = process.env.META_ACCESS_TOKEN;
@@ -38,6 +38,7 @@ module.exports = async (req, res) => {
         },
       ],
     };
+    if (test_event_code) payload.test_event_code = test_event_code;
 
     const metaRes = await fetch(
       `https://graph.facebook.com/v21.0/${pixelId}/events?access_token=${accessToken}`,
